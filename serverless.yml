@@ -13,6 +13,7 @@ provider:
       - '*/*'
   environment:
     BREF_BINARY_RESPONSES: '1'
+    APP_ENV: ${sls:stage}
     APP_DEBUG: false
     DB_HOST: ${ssm:/ctsf/db-host}
     DB_PORT: 5432

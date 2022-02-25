@@ -13,17 +13,17 @@ return [
     |
     */
     'locales' => [
-        'ro' => [
-            'enabled' => true,
-            'name'    => 'Română',
-            'code'    => 'ro_RO',
-            'ts_lang' => 'romanian',
-        ],
         'uk' => [
             'enabled' => true,
             'name'    => 'Українська',
             'code'    => 'uk_UA',
             'ts_lang' => 'russian',
+        ],
+        'ro' => [
+            'enabled' => true,
+            'name'    => 'Română',
+            'code'    => 'ro_RO',
+            'ts_lang' => 'romanian',
         ],
         'en' => [
             'enabled' => true,
