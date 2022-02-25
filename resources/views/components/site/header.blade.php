@@ -1,4 +1,4 @@
-{{-- <x-site.code4 /> --}}
+<x-site.code4 />
 
 <header x-data="{ menuOpen: false }" x-on:click.outside="menuOpen = false" class="relative shadow">
     <nav class="container py-4 space-y-4">
@@ -13,12 +13,18 @@
                 @if ($alternateUrls)
                     <div>
                         @foreach ($alternateUrls as $locale => $url)
-                            <a
-                                class="inline-flex p-2 text-sm rounded"
-                                hreflang="{{ $locale }}"
-                                href="{{ $url }}">
-                                {{ strtoupper($locale) }}
-                            </a>
+                            @if (app()->getLocale() === $locale)
+                                <span class="inline-flex p-2 text-sm font-bold">
+                                    {{ strtoupper($locale) }}
+                                </span>
+                            @else
+                                <a
+                                    class="inline-flex p-2 text-sm rounded"
+                                    hreflang="{{ $locale }}"
+                                    href="{{ $url }}">
+                                    {{ strtoupper($locale) }}
+                                </a>
+                            @endif
                         @endforeach
                     </div>
                 @endif
