@@ -1,4 +1,4 @@
-<x-site.code4 />
+{{-- <x-site.code4 /> --}}
 
 <header x-data="{ menuOpen: false }" x-on:click.outside="menuOpen = false" class="relative shadow">
     <nav class="container py-4 space-y-4">
@@ -150,3 +150,5 @@
 
     </nav>
 </header>
+
+<x-site.banner />
