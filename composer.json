@@ -12,6 +12,7 @@
         "artesaos/seotools": "^0.22",
         "blade-ui-kit/blade-icons": "^1.2",
         "bref/bref": "^1.5",
+        "bref/extra-php-extensions": "^0.11.25",
         "bref/laravel-bridge": "^1.1",
         "codezero/laravel-unique-translation": "^3.4",
         "creativeorange/gravatar": "^1.0",

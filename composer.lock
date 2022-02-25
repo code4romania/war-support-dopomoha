@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "33bcd5d0575d31820ab6819acd75e806",
+    "content-hash": "0fc07cb62750b2a569cb4c535a7ea171",
     "packages": [
         {
             "name": "andreiio/blade-remix-icon",
@@ -367,16 +367,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.209.30",
+            "version": "3.209.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "54c1e491b8de74360bbe94d727706db384c8d9a8"
+                "reference": "595a97c3ca53ba1f33f5bacbb6a8e48ccb45f068"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/54c1e491b8de74360bbe94d727706db384c8d9a8",
-                "reference": "54c1e491b8de74360bbe94d727706db384c8d9a8",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/595a97c3ca53ba1f33f5bacbb6a8e48ccb45f068",
+                "reference": "595a97c3ca53ba1f33f5bacbb6a8e48ccb45f068",
                 "shasum": ""
             },
             "require": {
@@ -452,9 +452,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.30"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.31"
             },
-            "time": "2022-02-23T19:14:31+00:00"
+            "time": "2022-02-24T22:02:07+00:00"
         },
         {
             "name": "blade-ui-kit/blade-icons",
@@ -614,6 +614,58 @@
                 }
             ],
             "time": "2022-02-18T13:14:07+00:00"
+        },
+        {
+            "name": "bref/extra-php-extensions",
+            "version": "0.11.25",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brefphp/extra-php-extensions.git",
+                "reference": "f661cd415d1fbe7e5370a75b61e93258080930d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brefphp/extra-php-extensions/zipball/f661cd415d1fbe7e5370a75b61e93258080930d3",
+                "reference": "f661cd415d1fbe7e5370a75b61e93258080930d3",
+                "shasum": ""
+            },
+            "conflict": {
+                "bref/bref": "<1.2.13"
+            },
+            "require-dev": {
+                "async-aws/core": "^1.7",
+                "async-aws/lambda": "^1.1",
+                "bref/logger": "^1.0",
+                "mnapoli/silly": "^1.7",
+                "mnapoli/silly-php-di": "^1.2",
+                "php-di/php-di": "^6.3",
+                "symfony/finder": "^5.2",
+                "symfony/http-client": "5.3.8",
+                "symfony/process": "^5.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com"
+                }
+            ],
+            "description": "Extra PHP extensions for your lambda application.",
+            "support": {
+                "issues": "https://github.com/brefphp/extra-php-extensions/issues",
+                "source": "https://github.com/brefphp/extra-php-extensions/tree/0.11.25"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-02-16T06:37:07+00:00"
         },
         {
             "name": "bref/laravel-bridge",
@@ -7687,12 +7739,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -8906,12 +8958,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\String\\": ""
-                },
                 "files": [
                     "Resources/functions.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Component\\String\\": ""
+                },
                 "exclude-from-classmap": [
                     "/Tests/"
                 ]
@@ -10013,16 +10065,16 @@
         },
         {
             "name": "composer/xdebug-handler",
-            "version": "3.0.1",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/xdebug-handler.git",
-                "reference": "12f1b79476638a5615ed00ea6adbb269cec96fd8"
+                "reference": "b11b961ef6b11e380e81a20b27c8cad54eeefe61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/12f1b79476638a5615ed00ea6adbb269cec96fd8",
-                "reference": "12f1b79476638a5615ed00ea6adbb269cec96fd8",
+                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/b11b961ef6b11e380e81a20b27c8cad54eeefe61",
+                "reference": "b11b961ef6b11e380e81a20b27c8cad54eeefe61",
                 "shasum": ""
             },
             "require": {
@@ -10059,7 +10111,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/xdebug-handler/issues",
-                "source": "https://github.com/composer/xdebug-handler/tree/3.0.1"
+                "source": "https://github.com/composer/xdebug-handler/tree/3.0.2"
             },
             "funding": [
                 {
@@ -10075,7 +10127,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-04T18:29:42+00:00"
+            "time": "2022-02-24T20:53:32+00:00"
         },
         {
             "name": "doctrine/annotations",

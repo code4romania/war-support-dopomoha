@@ -1,4 +1,5 @@
 /.idea
+/.serverless
 /.vscode
 /coverage
 /node_modules

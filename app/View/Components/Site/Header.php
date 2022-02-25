@@ -29,7 +29,9 @@ class Header extends Component
 
     public function __construct()
     {
-        $this->logo = Storage::disk('public')->url(settings('site.logo')); // TODO: fallback
+        $this->logo = settings('site.logo')
+                ? Storage::cloud()->url(settings('site.logo'))
+                : ''; // TODO: fallback
 
         $this->title = localized_settings('site.title');
 
