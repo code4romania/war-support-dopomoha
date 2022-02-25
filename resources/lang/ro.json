@@ -69,7 +69,9 @@
     "block.hero-bg-image": "Header cu imagine pe fundal",
     "block.image-grid": "Grilă de imagini",
     "block.image-text": "Imagine cu text",
+    "block.image-with-link": "Imagine cu link",
     "block.image": "Imagine",
+    "block.images-with-links": "Imagini cu link",
     "block.images": "Imagini",
     "block.link": "Link",
     "block.number": "Număr",
@@ -147,6 +149,7 @@
     "field.store_submissions": "Salvează răspunsurile în panou",
     "field.text": "Text",
     "field.title": "Titlu",
+    "field.url": "URL",
 
     "form.label": "Formular|Formulare",
     "form.action.create": "Adaugă formular",
