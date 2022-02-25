@@ -11,21 +11,38 @@
                 {{-- <x-site.search-form /> --}}
 
                 @if ($alternateUrls)
-                    <div>
-                        @foreach ($alternateUrls as $locale => $url)
-                            @if (app()->getLocale() === $locale)
-                                <span class="inline-flex p-2 text-sm font-bold">
-                                    {{ strtoupper($locale) }}
-                                </span>
-                            @else
-                                <a
-                                    class="inline-flex p-2 text-sm rounded"
-                                    hreflang="{{ $locale }}"
-                                    href="{{ $url }}">
-                                    {{ strtoupper($locale) }}
-                                </a>
-                            @endif
-                        @endforeach
+                    <div x-data="{ open: false }" x-on:click.away="open = false">
+                        <button
+                            class="flex items-center px-3 py-2 font-light rounded hover:bg-gray-100 focus:bg-gray-200 focus:outline-none"
+                            x-on:click="open = !open">
+                            <x-ri-global-line class="w-5 h-5 text-gray-900" />
+                            <x-ri-arrow-drop-down-line class="w-5 h-5 ml-1 -mr-1" />
+                        </button>
+
+                        <div
+                            class="absolute right-0 w-48 mt-2 origin-top-right bg-white shadow-xs"
+                            :class="{ 'hidden' : !open }"
+                            x-cloak>
+                            <ul class="shadow-lg">
+                                @foreach ($alternateUrls as $locale => $url)
+                                    <li class="text-sm">
+                                        @if (app()->getLocale() === $locale)
+                                            <span
+                                                class="flex px-3 py-2 font-bold rounded">
+                                                {{ config("translatable.locales.{$locale}.name") }}
+                                            </span>
+                                        @else
+                                            <a
+                                                class="flex px-3 py-2 rounded hover:bg-gray-100 focus:bg-gray-200 focus:outline-none"
+                                                hreflang="{{ $locale }}"
+                                                href="{{ $url }}">
+                                                {{ config("translatable.locales.${locale}.name") }}
+                                            </a>
+                                        @endif
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
                 @endif
 
