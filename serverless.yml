@@ -48,6 +48,7 @@ functions:
   # This function runs the Laravel website/API
   web:
     handler: public/index.php
+    memorySize: 512
     timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
     layers:
       - ${bref:layer.php-80-fpm}
@@ -62,6 +63,7 @@ functions:
   # This function lets us run artisan commands in Lambda
   artisan:
     handler: artisan
+    memorySize: 512
     timeout: 120 # in seconds
     layers:
       - ${bref:layer.php-80} # PHP
