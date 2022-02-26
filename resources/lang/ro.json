@@ -158,6 +158,8 @@
     "field.title": "Titlu",
     "field.url": "URL",
 
+    "footer.contact": "Dacă ați identificat neconcordanțe în conținut sau aveți nelămuriri scrieți-ne la e-mailul [dopomoha@code4.ro](mailto:dopomoha@code4.ro). Vom face tot posibilul să integrăm feedbackul dumneavoastră.",
+
     "form.label": "Formular|Formulare",
     "form.action.create": "Adaugă formular",
     "form.action.edit": "Editează formular",

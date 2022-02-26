@@ -1,8 +1,8 @@
 <footer class="relative mt-16 bg-gray-50 sm:mt-24 lg:mt-32">
     <div class="container py-12 lg:py-16">
         <div class="grid gap-8 xl:grid-cols-2">
-            <div>
-                {{-- TODO --}}
+            <div class="prose text-gray-500 max-w-prose">
+                {!! Str::markdown(__('footer.contact')) !!}
             </div>
 
             <nav>
