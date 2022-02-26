@@ -8,6 +8,6 @@
     "app.search.results": "Результаты поиска для “:query”",
     "app.search.empty": "Ничего не найдено.",
 
-    "pagination.previous": "Следующий",
-    "pagination.next": "Предыдущий"
+    "pagination.previous": "Следующая",
+    "pagination.next": "Предыдущая"
 }

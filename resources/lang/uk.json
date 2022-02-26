@@ -8,6 +8,6 @@
     "app.search.results": "Результати пошуку для “:query”",
     "app.search.empty": "Материалов не найдено.",
 
-    "pagination.previous": "Наступний",
-    "pagination.next": "Попередній"
+    "pagination.previous": "Наступна",
+    "pagination.next": "Попередня"
 }
