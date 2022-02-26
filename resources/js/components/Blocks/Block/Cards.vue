@@ -26,6 +26,8 @@
         icon: 'Editor/list-check-2',
         fields: {
             title: Object,
+            columns: Number,
+            shadow: Boolean,
         },
     });
 </script>
