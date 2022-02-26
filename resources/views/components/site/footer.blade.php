@@ -36,7 +36,7 @@
             <x-social-media-links :links="$social" class="md:order-2" />
 
             <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-                &copy; {{ date('Y') }} {{ $title }}
+                &copy; {{ date('Y') }} {{ $title }}. @lang('banner.code4')
             </p>
         </div>
     </div>
