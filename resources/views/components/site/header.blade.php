@@ -6,7 +6,7 @@
     <nav class="container py-4 space-y-4">
         <div class="relative flex items-center justify-between gap-3">
             <a href="{{ route('front.pages.index') }}" class="inline-flex">
-                <img src="{{ $logo }}" class="h-16 max-w-64" alt="{{ $title }}">
+                <img src="{{ $logo }}" class="h-16 max-w-48 sm:max-w-64" alt="{{ $title }}">
             </a>
 
             <div class="flex items-center gap-3">
