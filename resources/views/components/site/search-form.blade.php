@@ -8,8 +8,8 @@
         'action' => $action,
     ]) }}>
 
-    <label class="relative flex items-center ">
-        <span class="sr-only">__('app.search.placeholder')</span>
+    <label class="relative flex items-center">
+        <span class="sr-only">{{ __('app.search.placeholder') }}</span>
 
         <button
             type="submit"

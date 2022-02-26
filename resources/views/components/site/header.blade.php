@@ -8,7 +8,7 @@
             </a>
 
             <div class="flex items-center gap-3">
-                {{-- <x-site.search-form /> --}}
+                <x-site.search-form />
 
                 @if ($alternateUrls)
                     <div x-data="{ open: false }" x-on:click.away="open = false">

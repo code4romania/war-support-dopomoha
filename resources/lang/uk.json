@@ -2,5 +2,12 @@
     "banner.code4": "Продукт Code for Romania.",
     "banner.more": "Дізнатися більше",
     "banner.partnership": "Проект у партнерстві з",
-    "banner.madeby": "зроблено"
+    "banner.madeby": "зроблено",
+
+    "app.search.placeholder": "Пошук",
+    "app.search.results": "Результати пошуку для “:query”",
+    "app.search.empty": "Материалов не найдено.",
+
+    "pagination.previous": "Наступний",
+    "pagination.next": "Попередній"
 }

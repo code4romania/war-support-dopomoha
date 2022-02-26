@@ -7,6 +7,7 @@ namespace App\View\Components\Site;
 use App\Models\MenuItem;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Route;
@@ -64,10 +65,10 @@ class Header extends Component
             ->mapWithKeys(fn (array $config, string $locale) => [
                 $locale => $this->withLocale($locale, function () use ($routeName, $model, $locale) {
                     if (Str::endsWith($routeName, '.search')) {
-                        return route($routeName, [
-                            ...request()->query(),
-                            'locale' => $locale,
-                        ]);
+                        return route($routeName, array_merge(
+                            Arr::wrap(request()->query()),
+                            ['locale' => $locale]
+                        ));
                     }
 
                     if (Str::endsWith($routeName, '.index')) {

@@ -2,5 +2,13 @@
     "banner.code4": "A Code for Romania solution.",
     "banner.more": "Find out more",
     "banner.partnership": "A partnership with",
-    "banner.madeby": "made by"
+    "banner.madeby": "made by",
+
+    "app.search.placeholder": "Search",
+    "app.search.results": "Search results for “:query”",
+    "app.search.empty": "No results found.",
+
+    "pagination.previous": "Previous",
+    "pagination.next": "Next",
+    "pagination.goto": "Go to page :page"
 }

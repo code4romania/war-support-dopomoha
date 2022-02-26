@@ -7,18 +7,26 @@
         <div class="mt-16 border-b border-gray-300"></div>
     </header>
 
-    <div class="container space-y-8">
+    <div class="container">
         <div class="grid gap-8 lg:gap-12">
             @forelse ($items as $item)
                 <article>
-                    <h1>
-                        <a href="{{ $item->search_result->url_public }}">
-                            {{ $item->search_result->title }}
-                        </a>
-                    </h1>
+                    <a href="{{ $item->search_result->url_public }}"
+                        class="font-semibold hover:underline">
+                        <h1>{{ $item->search_result->title }}</h1>
+                    </a>
 
-                    <div class="prose">
-                        {!! $item->search_result->description !!}
+                    <div class="max-w-prose">
+                        <div class="prose prose-primary">
+                            {!! $item->search_result->description !!}
+                        </div>
+
+                        <div class="mt-4 text-right">
+                            <a href="{{ $item->search_result->url_public }}"
+                                class="text-sm font-semibold text-primary hover:underline">
+                                {{ __('banner.more') }} <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
                     </div>
                 </article>
             @empty
