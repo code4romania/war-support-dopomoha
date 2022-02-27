@@ -72,7 +72,9 @@ functions:
 
 constructs:
   website:
-    domain: dopomoha.ro
+    domain:
+      - dopomoha.ro
+      - www.dopomoha.ro
     certificate: ${ssm:/ctsf/certificate-arn}
     type: server-side-website
     assets:
