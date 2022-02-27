@@ -1,6 +1,6 @@
 <x-site.code4 />
 
-<header x-data="{ menuOpen: false }" x-on:click.outside="menuOpen = false" class="relative shadow">
+<header x-data="{ menuOpen: false }" class="relative shadow">
     <x-site.search-form class="container py-4 md:hidden" />
 
     <nav class="container py-4 space-y-4">
@@ -13,17 +13,18 @@
                 <x-site.search-form class="hidden md:block" />
 
                 @if ($alternateUrls)
-                    <div x-data="{ open: false }" x-on:click.away="open = false">
+                    <div x-data="{ langOpen: false }" x-on:click.away="langOpen = false">
                         <button
                             class="flex items-center px-3 py-2 font-light rounded hover:bg-gray-100 focus:bg-gray-200 focus:outline-none"
-                            x-on:click="open = !open">
+                            x-on:click="langOpen = !langOpen">
                             <x-ri-global-line class="w-5 h-5 text-gray-900" />
                             <x-ri-arrow-drop-down-line class="w-5 h-5 ml-1 -mr-1" />
                         </button>
 
                         <div
                             class="absolute right-0 w-48 mt-2 origin-top-right bg-white shadow-xs"
-                            :class="{ 'hidden' : !open }"
+                            x-show="langOpen"
+                            x-collapse
                             x-cloak>
                             <ul class="shadow-lg">
                                 @foreach ($alternateUrls as $locale => $url)
@@ -119,6 +120,7 @@
     </nav>
 
     <nav
+        x-on:click.outside="menuOpen = false"
         class="absolute inset-x-0 z-50 transition origin-top transform bg-white shadow-lg top-full lg:hidden"
         x-show="menuOpen"
         x-collapse
