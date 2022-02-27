@@ -17,7 +17,7 @@ return [
             'enabled' => true,
             'name'    => 'Українська',
             'code'    => 'uk_UA',
-            'ts_lang' => 'russian',
+            'ts_lang' => 'simple',
         ],
         'ro' => [
             'enabled' => true,

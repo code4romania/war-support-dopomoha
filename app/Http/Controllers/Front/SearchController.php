@@ -57,7 +57,7 @@ class SearchController extends Controller
     private function search(string $query, string $model): LengthAwarePaginator
     {
         return app($this->searchable[$model])
-            ->search($query)
+            ->search($query, multilingual: true)
             ->paginate();
     }
 

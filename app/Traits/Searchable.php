@@ -19,9 +19,10 @@ trait Searchable
      * @param  \Illuminate\Database\Eloquent\Builder $query
      * @param  string                                $terms
      * @param  bool                                  $multilingual
+     * @param  bool                                  $includeUnpublished
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function scopeSearch(Builder $query, string $terms, bool $multilingual = false): Builder
+    public function scopeSearch(Builder $query, string $terms, bool $multilingual = false, bool $includeUnpublished = false): Builder
     {
         $terms = (string) Str::of(html_entity_decode($terms))
             ->stripTags();
@@ -29,7 +30,8 @@ trait Searchable
         $columns = $this->getSearchableColumns();
 
         $options = [
-            'mode' => 'websearch',
+            'mode'     => 'websearch',
+            'language' => config('translatable.locales.' . app()->getLocale() . '.ts_lang', 'simple'),
         ];
 
         return $query
@@ -58,14 +60,29 @@ trait Searchable
                 }
             )
             ->when(
-                SupportsTrait::publishable($this),
+                SupportsTrait::publishable($this) && $includeUnpublished,
                 fn (Builder $query) => $query->withDrafted()
             )
             ->when(
                 SupportsTrait::blocks($this),
-                function (Builder $query) use ($terms, $options) {
-                    $options['language'] = 'simple';
-                    $query->orWhereHas('blocks', fn (Builder $q) => $q->whereFullText('blocks.content', $terms, $options));
+                function (Builder $query) use ($multilingual, $terms, $options) {
+                    $query->orWhereHas('blocks', function (Builder $query) use ($multilingual, $terms, $options) {
+                        $query->when(
+                            $multilingual,
+                            function (Builder $query) use ($terms, $options) {
+                                locales()->each(
+                                    function (array $config, string $locale) use ($query, $terms, $options) {
+                                        $options['language'] = $config['ts_lang'] ?? 'simple';
+
+                                        $query->whereFullText('blocks.content', $terms, $options, 'or');
+                                    }
+                                );
+                            },
+                            function (Builder $query) use ($terms, $options) {
+                                $query->whereFullText('blocks.content', $terms, $options);
+                            }
+                        );
+                    });
                 }
             );
     }
