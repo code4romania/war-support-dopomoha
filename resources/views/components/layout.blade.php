@@ -35,17 +35,9 @@
 
     <x-site.footer />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8N2MJF8JB2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'G-8N2MJF8JB2');
-    </script>
+    @production
+        <x-site.analytics />
+    @endproduction
 </body>
 
 </html>
