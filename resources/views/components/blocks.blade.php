@@ -6,7 +6,7 @@
                 'empty:hidden',
             ])>
 
-            <x-dynamic-component :component="$block->component" :block="$block" />
+            <x-dynamic-component :component="$block->component" :block="$block" :index="$loop->index" />
 
             @if (app()->environment(['local']))
                 <details class="mt-2">

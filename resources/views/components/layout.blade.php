@@ -15,6 +15,8 @@
 
     </style>
 
+    @stack('preload')
+
     {{-- Scripts --}}
     <script src="{{ asset(mix('assets/public.js')) }}" defer></script>
     @stack('scripts')
