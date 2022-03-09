@@ -6,7 +6,7 @@
                 <a href="https://gov.ro/" target="_blank" rel="noopener"
                     class="inline-block focus:outline-none focus:ring">
                     <img src="{{ asset(mix('assets/images/gov.png')) }}"
-                        class="inline-block object-contain w-auto h-8 sm:h-10"
+                        class="inline-block object-contain w-auto h-10 sm:h-12"
                         alt="">
                 </a>
                 <a href="http://www.dsu.mai.gov.ro/" target="_blank" rel="noopener"
