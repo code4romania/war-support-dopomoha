@@ -1,12 +1,12 @@
 <template>
     <draggable
-        v-model="modelValue"
         item-key="id"
         class="grid gap-4"
         handle=".handle"
         ghost-class="opacity-50"
         :animation="200"
-        @change="$emit('update:blocks', blocks)"
+        :list="modelValue"
+        @change="$emit('update:modelValue', modelValue)"
     >
         <template #item="{ element, index }">
             <block-item

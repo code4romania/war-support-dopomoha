@@ -1,12 +1,12 @@
 <template>
     <draggable
-        v-model="blocks"
         item-key="id"
         group="blocks"
         class="grid items-start grid-cols-1 gap-4 md:grid-cols-2"
         ghost-class="opacity-50"
         handle=".handle"
         :animation="200"
+        :list="blocks"
         @change="$emit('update:blocks', blocks)"
     >
         <template #header>

@@ -21,6 +21,10 @@
     <script src="{{ asset(mix('assets/public.js')) }}" defer></script>
     @stack('scripts')
 
+    @production
+        <x-site.analytics />
+    @endproduction
+
     {!! SEO::generate() !!}
 </head>
 
@@ -34,10 +38,6 @@
     </main>
 
     <x-site.footer />
-
-    @production
-        <x-site.analytics />
-    @endproduction
 </body>
 
 </html>

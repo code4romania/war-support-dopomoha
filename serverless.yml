@@ -82,6 +82,17 @@ constructs:
       '/favicon.ico': public/favicon.ico
       '/robots.txt': public/robots.txt
       # add here any file or directory that needs to be served from S3
+    forwardedHeaders:
+      - Accept
+      - Accept-Language
+      - Authorization
+      - Content-Type
+      - Origin
+      - Referer
+      - X-Forwarded-Host
+      - X-XSRF-TOKEN
+      - X-INERTIA
+      - X-INERTIA-VERSION
 
 plugins:
   - ./vendor/bref/bref
