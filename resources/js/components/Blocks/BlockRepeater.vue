@@ -1,12 +1,12 @@
 <template>
     <draggable
+        :list="items"
         item-key="id"
         class="grid gap-4"
         handle=".handle"
         ghost-class="opacity-50"
         :animation="200"
-        :list="modelValue"
-        @change="$emit('update:modelValue', modelValue)"
+        @change="$emit('update:modelValue', items)"
     >
         <template #item="{ element, index }">
             <block-item
@@ -24,7 +24,17 @@
         </template>
 
         <template #footer>
-            <button type="button" @click="addBlock">Add another</button>
+            <div>
+                <button
+                    type="button"
+                    @click="addBlock"
+                    class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-gray-100"
+                >
+                    <icon name="System/add-line" class="w-5 h-5 mr-2 -ml-1" />
+
+                    <span v-text="$t('app.action.add')" />
+                </button>
+            </div>
         </template>
     </draggable>
 </template>
@@ -43,7 +53,7 @@
                 type: String,
                 required: true,
             },
-            modelValue: {
+            items: {
                 type: Array,
                 default: () => [],
             },
@@ -51,7 +61,7 @@
         emits: ['update:modelValue'],
         setup(props) {
             const addBlock = () => {
-                props.modelValue.push({
+                props.items.push({
                     id: Date.now(),
                     type: props.component,
                     content: {},
@@ -63,15 +73,15 @@
 
             const duplicateBlock = (index) => {
                 const block = {
-                    ...cloneDeep(props.modelValue[index]),
+                    ...cloneDeep(props.items[index]),
                     id: Date.now(),
                 };
 
-                props.modelValue.splice(index + 1, 0, block);
+                props.items.splice(index + 1, 0, block);
             };
 
             const deleteBlock = (index) => {
-                props.modelValue.splice(index, 1);
+                props.items.splice(index, 1);
             };
 
             return {
