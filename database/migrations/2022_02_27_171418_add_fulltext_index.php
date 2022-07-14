@@ -15,11 +15,12 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('blocks', function (Blueprint $table) {
-            $table->fulltext(['content']);
+            $table->fulltext('content');
         });
 
         Schema::table('pages', function (Blueprint $table) {
-            $table->fulltext(['title', 'description']);
+            $table->fullText('title');
+            $table->fullText('description');
         });
     }
 };
