@@ -29,7 +29,6 @@
                         v-model="form.slug"
                         route-name="front.people.show"
                         route-key="person"
-                        :source="form.name"
                         required
                     />
                 </div>

@@ -56,7 +56,7 @@
 </template>
 
 <script>
-    import { computed } from 'vue';
+    import { computed, watch } from 'vue';
     import { useForm, route } from '@/helpers';
 
     export default {
@@ -114,6 +114,11 @@
                         : null;
                 },
             });
+
+            watch(
+                () => props.resource?.slug,
+                (slug) => (form.slug = slug)
+            );
 
             return {
                 form,

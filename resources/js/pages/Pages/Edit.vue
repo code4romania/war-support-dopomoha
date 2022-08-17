@@ -30,7 +30,6 @@
                         v-model="form.slug"
                         route-name="front.pages.show"
                         route-key="page"
-                        :source="form.title"
                         translatable
                         required
                     />

@@ -36,7 +36,6 @@
                         v-model="form.slug"
                         route-name="front.post_categories.show"
                         route-key="post_category"
-                        :source="form.title"
                         translatable
                         required
                     />
