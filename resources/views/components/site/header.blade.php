@@ -1,4 +1,4 @@
-<x-site.code4 />
+<x-site.banner />
 
 <header x-data="{ menuOpen: false }" class="relative shadow">
     <x-site.search-form class="container py-4 md:hidden" />
@@ -145,7 +145,7 @@
 
                             <x-ri-arrow-down-s-line
                                 class="transform w-7 h-7 p-0.5 text-gray-400"
-                                ::class="{ '-rotate-180': open === {{ $loop->index }}, 'rotate-0': !(open)  }" />
+                                ::class="{ '-rotate-180': open === {{ $loop->index }}, 'rotate-0': !(open) }" />
                         </button>
 
                         <ul class="w-full mt-4 space-y-6" x-show="open === {{ $loop->index }}" x-collapse>
@@ -178,4 +178,4 @@
     </nav>
 </header>
 
-<x-site.banner />
+<x-site.partners />
