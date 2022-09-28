@@ -178,4 +178,4 @@
     </nav>
 </header>
 
-<x-site.banner />
+<x-site.partners />
